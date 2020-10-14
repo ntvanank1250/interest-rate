@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lai ngan hang</title>
+</head>
+<body>
+    <table>
+<tr>
+    <td>Số tiền gủi: </td>
+    <td> <input type="text"  id="sotien"></td>
+    <td>VNĐ||</td>
+
+<td>Lãi: </td>
+    <td><input type="text"  id="lai"></td>
+    <td>% ||</td>
+    <td>Kỳ hạn: </td>
+    <td> <input type="number"  id="kyhan"></td>
+    <td>(Năm)</td>
+</tr>
+<tr>
+    <td>Số tiền lãi:</td>
+    <td id="tienlai"></td>
+    <td>VNĐ</td>
+
+</tr>
+<tr>
+    <td>Tổng số tiền: </td>
+    <td id=tong></td>
+    <td>VNĐ</td>
+</tr>
+<tr>
+    <td><input type="button" onclick="check()" value="check" "></td>
+</tr>
+</table>
+<script> function check(){
+let sotien=Number(document.getElementById("sotien").value)
+let lai=Number(document.getElementById("lai").value)
+let kyhan=Number(document.getElementById("kyhan").value)
+let tienlai= (lai*sotien/100)*kyhan
+let tong= tienlai+sotien
+document.getElementById("tienlai").innerText=tienlai
+document.getElementById("tong").innerText=tong
+}
+</script>
+</body>
+</html>
